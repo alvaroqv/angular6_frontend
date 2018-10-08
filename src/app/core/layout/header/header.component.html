@@ -1,0 +1,17 @@
+<mat-toolbar class="primeiraBarra" color="primary">
+
+  <button mat-button class="menu" (click)="barra.toggle()">
+    <mat-icon>apps</mat-icon>
+  </button>
+
+  <!-- app-icone-brasao class="icone-brasao"></app-icone-brasao -->
+  <span class="tituloSistema">Sistema Base de Exemplo</span>
+
+  <span class="example-fill-remaining-space"></span>
+  <a mat-icon-button [routerLink]="['/']" matTooltip="Home">
+    <mat-icon class="mat-24" aria-label="home">home</mat-icon>
+  </a>
+  <a (click)="logout()">
+    <mat-icon class="mat-24" aria-label="account_circle"  matTooltip="Sair" class="m-t-11 sair">account_circle</mat-icon>
+  </a>
+</mat-toolbar>

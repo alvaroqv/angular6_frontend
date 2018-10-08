@@ -1,0 +1,93 @@
+
+
+.divPrincipal {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.cabecalhoPrincipal {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.corpoPrincipal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bannerPrincipal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .mat-sidenav {
+    width: 400px;
+  }
+  
+  .sidenav[_ngcontent-c1] {
+    width: 250px !important;
+    padding-left: 20px;
+  }
+
+.menuLateral {
+    margin: 0;
+    width: 250px;
+    height: 100%;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+.layout-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 32px;
+    overflow: hidden;
+  }
+  
+  .layout-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+  }
+  
+  
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 250px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  }
+  
+  .menuLateral {
+    margin: 0;
+    width: 250px;
+    height: 100%;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+  }
+  
+  .navigation-hold {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .li-menu.ativo {
+    font-weight: bold;
+    background-color: #97a0d7;
+  }

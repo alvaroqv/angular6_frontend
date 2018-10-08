@@ -1,0 +1,70 @@
+.primeiraBarra .iconeBarraPrincipal {
+    padding: 10px;
+  }
+  
+  .primeiraBarra {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 16px 0 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  }
+  
+  .primeiraBarra .icone-brasao {
+    width: 40px !important;
+    margin-right: 15px;
+    height: 40px !important;
+    margin-top: 10px;
+  }
+  
+  .barraDeFerramenteBotton {
+    font-size: 12px !important;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54) !important;
+    justify-content: center;
+  }
+  
+  .barraDeFerramenteBotton .icone-brasao {
+    display: flex;
+    margin-right: 10px;
+  }
+  
+  .bannerPrincipal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .primeiraBarra .icone-brasao {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  
+  .menu {
+    height: 100%;
+  }
+  
+  .m-t-11{
+    margin-top: 11px;
+  }
+  
+  
+  .sair{
+   cursor: pointer;
+  }
+  
+  
+  mat-icon.m-t-11.mat-icon.material-icons {
+    cursor: pointer;
+  }
