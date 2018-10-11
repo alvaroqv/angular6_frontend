@@ -5,6 +5,7 @@ import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatIconModule } fr
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 
 
@@ -15,7 +16,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    PanelMenuModule
   ],
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
   exports: [LayoutComponent]
