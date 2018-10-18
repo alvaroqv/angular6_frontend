@@ -13,28 +13,20 @@
         <div id="scroll-area" class="navigation-hold"> 
           <mat-toolbar color="primary">Menu</mat-toolbar>
 
-          <p-panelMenu [model]="items" [style]="{'width':'300px'}">rr</p-panelMenu>
+          <p-panelMenu [model]="itemsMenu" [style]="{'width':'300px'}"></p-panelMenu>
 
-          <ul>
-            <li>
-              <h2><a routerLink="admin-sorteios">Tour of Heroes</a></h2>
-            </li>
-          </ul>
-<!--             <mat-nav-list>
-            <a mat-list-item routerLink="/">Home</a>
-            <a mat-list-item routerLink="/table">Table</a>
-            <a mat-list-item routerLink="/dashboard">Dashboard</a>
-            <a mat-list-item routerLink="/charts">Charts</a>
-            <a mat-list-item routerLink="/material">Componentes</a>
-      
-            
-          </mat-nav-list> -->
           <!-- app-sidenav [items]="menuItems" [hasIconMenu]="hasIconTypeMenuItem" [iconMenuTitle]="iconTypeMenuTitle"></app-sidenav-->
         </div> 
       
     </mat-drawer>
     
       <div id="scroll-container-area" class="layout-sidenav-content" class="navigation-hold">
+        <p-breadcrumb [model]="itemsMenuBreadCrumb" [home]="home"></p-breadcrumb>
+
+        <div [hidden]="!loading" class="loader">
+        <mat-progress-bar color="primary" mode="indeterminate"></mat-progress-bar>
+        </div>
+
         <router-outlet></router-outlet>
       </div>
     

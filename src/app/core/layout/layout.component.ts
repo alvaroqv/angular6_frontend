@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { BreadcrumbService } from 'src/app/core/layout/breadcrumb/breadcrumb.service';
+import { Subscription } from 'rxjs/internal/Subscription';
+
 
 @Component({
   selector: 'app-layout',
@@ -8,88 +11,49 @@ import {MenuItem} from 'primeng/api';
 })
 export class LayoutComponent implements OnInit {
 
-  items: MenuItem[];
+ @Input() loading: Boolean= false;
+ @Input() home: MenuItem;
+  itemsMenu: MenuItem[];
+  itemsMenuBreadCrumb: MenuItem[];
+//  home: MenuItem;
+  itemSubscription:Subscription;
+  textData;
+  textSub;
 
-  constructor() { }
+  constructor(public breadcrumbService:BreadcrumbService) { 
+
+   }
 
   ngOnInit() {
 
-    this.items = [
+    this.itemsMenu = [
+        {
+            label: 'Administrar Participantes',
+            icon: 'fa fa-users',
+            routerLink:['admin-usuarios']
+        },
+        {
+            label: 'Administrar Sorteios',
+            icon: 'fa fa-gift',
+            routerLink:['admin-sorteios']
+        },
       {
-          label: 'File',
-          icon: 'pi pi-pw pi-file',
-          items: [{
-                  label: 'New', 
-                  icon: 'pi pi-fw pi-plus',
+          label: 'Administrar a Ferramenta',
+          icon: 'fa fa-briefcas',
+          items: [
+             {label: 'Administrar Usuários', icon: 'pi pi-fw pi-user'},  
+             {
+                  label: 'Relatórios', icon: 'fa fa-table',
                   items: [
-                      {label: 'User', icon: 'pi pi-fw pi-user-plus',routerLink:['admin-sorteios'] },
-                      {label: 'Filter', icon: 'pi pi-fw pi-filter'}
+                      {label: 'Acessos', icon: 'fa fa-square-o',routerLink:['admin-sorteios1'] },
+                      {label: 'Interação', icon: 'fa fa-check-square-o'}
                   ]
               },
-              {label: 'Open', icon: 'pi pi-fw pi-external-link'},
               {separator: true},
-              {label: 'Quit', icon: 'pi pi-fw pi-times'}
+              {label: 'Bloquear IP', icon: 'fa fa-minus-circle'}
           ]
-      },
-      {
-          label: 'Edit',
-          icon: 'pi pi-fw pi-pencil',
-          items: [
-              {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-              {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-          ]
-      },
-      {
-          label: 'Help',
-          icon: 'pi pi-fw pi-question',
-          items: [
-              {
-                  label: 'Contents',
-                  icon: 'pi pi-pi pi-bars'
-              },
-              {
-                  label: 'Search', 
-                  icon: 'pi pi-pi pi-search', 
-                  items: [
-                      {
-                          label: 'Text', 
-                          items: [
-                              {
-                                  label: 'Workspace'
-                              }
-                          ]
-                      },
-                      {
-                          label: 'User',
-                          icon: 'pi pi-fw pi-file',
-                      }
-              ]}
-          ]
-      },
-      {
-          label: 'Actions',
-          icon: 'pi pi-fw pi-cog',
-          items: [
-              {
-                  label: 'Edit',
-                  icon: 'pi pi-fw pi-pencil',
-                  items: [
-                      {label: 'Save', icon: 'pi pi-fw pi-save'},
-                      {label: 'Update', icon: 'pi pi-fw pi-save'},
-                  ]
-              },
-              {
-                  label: 'Other',
-                  icon: 'pi pi-fw pi-tags',
-                  items: [
-                      {label: 'Delete', icon: 'pi pi-fw pi-minus'}
-                  ]
-              }
-          ]
-      }
-  ];
-
-
+      }, 
+    ];
+   // this.home = {icon: 'pi pi-home'};
   }
-
 }
