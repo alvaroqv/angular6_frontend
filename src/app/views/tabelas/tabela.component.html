@@ -1,0 +1,35 @@
+<mat-card class="p-0 mb-1">
+  <mat-card-title class="mat-bg-primary">
+    <div class="card-title-text">AÇÃO ENTRE AMIGOS</div>
+  </mat-card-title>
+  <mat-card-content>
+    <h3>VALOR POR NÚMERO: R$ 40,00</h3>
+    <h5>Reservados: {{reservados}} de {{total}}</h5>
+    
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="p-0">
+  <mat-card-title class="mat-bg-primary">
+    <div class="card-title-text" matTooltip="Tooltip Does NOT work!">
+        Material icon list</div>
+  </mat-card-title>
+  <mat-card-content>
+    <div 
+    fxLayout="column" 
+    class="text-center">
+      <a href="#" #numeroBT class="rifa_number item_disponivel"  
+      matTooltip="Tooltip Works"
+      (click)="reservar($event,numeroBT, numero)"
+      *ngFor="let numero of numeros; let i = index ">
+     
+      <div >
+        <div>{{numero}}</div>
+          <mat-icon
+          class="mb-1" 
+          [style.fontSize]="'20px'">check_box_outline_blank</mat-icon> <br>
+        </div>
+      </a>
+    </div>
+  </mat-card-content>
+</mat-card>

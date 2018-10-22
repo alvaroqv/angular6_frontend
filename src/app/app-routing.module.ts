@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DelayResolve } from 'src/app/core/layout/DelayRolver';
+import { CartelasComponent } from 'src/app/views/cartelas/cartelas.component';
 
 const routes: Routes = [
   {
@@ -8,6 +9,15 @@ const routes: Routes = [
     loadChildren: './views/admin-sorteios/admin-sorteios.module#AdminSorteiosModule',
     resolve: [DelayResolve],
     data: { title: 'Forms', breadcrumb: 'FORMS'}
+  },
+  {
+    path: 'tabelas',
+    loadChildren: './views/tabelas/tabela.module#TabelaModule',
+    data: { title: 'Tables', breadcrumb: 'TABLES'}
+  },
+  { 
+    path: 'cartelas', component: CartelasComponent, 
+    data: { title: 'Cartelas' } 
   },
   {
     path: 'admin-usuarios',
