@@ -10,8 +10,6 @@ import { CartelasComponent } from 'src/app/views/cartelas/cartelas.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BaseDirective,
-    CartelasComponent
   ],
   imports: [
     BrowserModule,

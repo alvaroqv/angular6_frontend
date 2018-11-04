@@ -15,9 +15,16 @@ const routes: Routes = [
     loadChildren: './views/tabelas/tabela.module#TabelaModule',
     data: { title: 'Tables', breadcrumb: 'TABLES'}
   },
-  { 
+ /* 
+ { 
     path: 'cartelas', component: CartelasComponent, 
     data: { title: 'Cartelas' } 
+  },
+  */
+  { 
+    path: 'exemplo', 
+    loadChildren: './views/exemplo/exemplo.module#ExemploModule',
+    data: { title: 'Exemplos' } 
   },
   {
     path: 'admin-usuarios',
